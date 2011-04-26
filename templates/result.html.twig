@@ -1,0 +1,11 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+<h1>These are your results, {{user.getTwitterHandle()}}</h1>
+
+
+<img src="{{locationGraphUrl|raw}}">
+<img src="{{wordGraphUrl|raw}}">
+
+{% endblock %}

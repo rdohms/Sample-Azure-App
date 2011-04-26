@@ -1,0 +1,24 @@
+doctrine.dbal.connection_options:
+    driver: pdo_mysql
+    dbname: azure_php
+    host: localhost
+    user: root
+    password: root
+      
+doctrine.orm: true
+
+doctrine.orm.entities:
+    type: "annotation"
+    path: "../library/App/Entity"
+    namespace: App\Entity
+    
+twitter:
+    app:
+      callbackUrlPath: "/prj/php/twitter-azure/public/authorize-twitter"
+      apiKey: rX6iTo4z7iUZUjbbTjJb9g
+      consumerKey: rX6iTo4z7iUZUjbbTjJb9g
+      consumerSecret: jHsq24wig8Az2xNdnsr1WJJu0xFrMy3NxGP1MKc87SE
+    server:
+      requestTokenUrl: "http://twitter.com/oauth/request_token"
+      authorizeUrl:    "http://twitter.com/oauth/authorize"
+      accessTokenUrl:  "http://twitter.com/oauth/access_token"

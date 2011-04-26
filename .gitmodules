@@ -1,0 +1,21 @@
+[submodule "library/vendor/Symfony/Component/Config"]
+	path = library/vendor/Symfony/Component/Config
+	url = https://github.com/symfony/Config.git
+[submodule "library/vendor/Symfony/Component/Yaml"]
+	path = library/vendor/Symfony/Component/Yaml
+	url = https://github.com/symfony/Yaml.git
+[submodule "library/vendor/Twig"]
+	path = library/vendor/Twig
+	url = https://github.com/fabpot/Twig.git
+[submodule "library/vendor/ExtraExtensions"]
+	path = library/vendor/ExtraExtensions
+	url = git://gist.github.com/920944.git
+[submodule "library/vendor/Doctrine/doctrine-common"]
+	path = library/vendor/Doctrine/doctrine-common
+	url = git://github.com/doctrine/common.git
+[submodule "library/vendor/Doctrine/doctrine-dbal"]
+	path = library/vendor/Doctrine/doctrine-dbal
+	url = git://github.com/doctrine/dbal.git
+[submodule "library/vendor/Doctrine/doctrine"]
+	path = library/vendor/Doctrine/doctrine
+	url = git://github.com/doctrine/doctrine2.git
