@@ -20,6 +20,11 @@ $app->get('/authorize-twitter', function () use ($app){
     return $action->run();
 });
 
+$app->get('/registration-done', function () use ($app){
+    $action = $app->getAction('RegistrationDone');
+    return $action->run();
+});
+
 $app->get('/process', function () use ($app){
     $action = $app->getAction('Process');
     return $action->run();

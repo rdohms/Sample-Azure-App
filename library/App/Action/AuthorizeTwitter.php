@@ -49,6 +49,9 @@ class AuthorizeTwitter extends Base
         $this->getApp()->getDoctrineEntityManager()->persist($user);
         $this->getApp()->getDoctrineEntityManager()->flush();
         
-        return $this->getApp()->redirect('process');
+        //Add user to our Queue
+        
+        
+        return $this->getApp()->redirect('registration-done');
     }
 }
