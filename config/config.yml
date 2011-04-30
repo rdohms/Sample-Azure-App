@@ -1,9 +1,10 @@
 doctrine.dbal.connection_options:
     driver: pdo_sqlsrv
-    dbname: azure_php
-    host: localhost
-    user: root
-    password: root
+    dbname: twitter-sample-app
+    host: pl69qjwy8k.database.windows.net
+    port: 1433
+    user: rdohmsDemo@pl69qjwy8k
+    password: Sample123
       
 doctrine.orm: true
 
