@@ -2,11 +2,26 @@
 
 {% block content %}
 
-<h1>Ok, Gotcha!</h1>
+<h1>Ok, {{user.getTwitterHandle}}!</h1>
 
 <p>
-Our Hamsters are now running in the background getting you your information, please wait and we will get in touch with
-fresh baked stats for you.
+Our Hamsters are now running in the background getting you your information. Please choose one of the methods below to be warned when this is done.
 </p>
 
+<h2>Email alert</h2>
+<p>If you would like to receive and email when this is done, fill in the form below:</p>
+<form action="/save-email" method="post" accept-charset="utf-8">
+	<input type="hidden" name="twitter_handle" value="{{user.getTwitterHandle}}" id="twitter_handle">
+	<p>
+		<label for="email">Email:</label><input type="text" name="email" value="" id="email">
+	</p>
+	<p>
+		<input type="submit" value="Continue &rarr;">
+	</p>
+</form>
+
+<p>or</p>
+
+<h2>Visit Results Page</h2>
+<p>You can just visit your own personalized <a href="/result/{{user.getTwitterHandle}}">results page</a>, and wait for it to be ready.</p>
 {% endblock %}

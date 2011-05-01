@@ -1,5 +1,5 @@
 doctrine.dbal.connection_options:
-    driver: pdo_sqlsrv
+    driver: pdo_mysql
     dbname: azure_php
     host: localhost
     user: root
@@ -14,7 +14,7 @@ doctrine.orm.entities:
     
 twitter:
     app:
-      callbackUrlPath: "/prj/php/twitter-azure/public/authorize-twitter"
+      callbackUrlPath: "/authorize-twitter"
       apiKey: rX6iTo4z7iUZUjbbTjJb9g
       consumerKey: rX6iTo4z7iUZUjbbTjJb9g
       consumerSecret: jHsq24wig8Az2xNdnsr1WJJu0xFrMy3NxGP1MKc87SE
@@ -22,3 +22,11 @@ twitter:
       requestTokenUrl: "http://twitter.com/oauth/request_token"
       authorizeUrl:    "http://twitter.com/oauth/authorize"
       accessTokenUrl:  "http://twitter.com/oauth/access_token"
+      
+azure:
+  queues:
+    atc-main:
+      host: "queue.core.windows.net"
+      accountName: "atsample"
+      accountKey: "NdBuy7sg4SdjpwIsgjgPCqg1dTWOR7oEe76B6S5apvHR4FY+y4vsR+FTeuyrgYvdONAWIVxXS28tqcOe0yI7Cg=="
+        

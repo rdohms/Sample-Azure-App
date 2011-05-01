@@ -8,10 +8,9 @@ class Result extends Base
     {
         
         $repo = $this->getApp()->getDoctrineEntityManager()->getRepository('App\Entity\User');
-        $user = $repo->findByTwitterHandle($this->getApp()->getResource('session')->get('twitter_handle'));
+        $user = $repo->findByTwitterHandle($args['handle']);
 
         $stats = unserialize($user->getStats());
-        
         
         $locationGraphUrl = $this->buildUrl($stats['location_count'], 'Retweets by Location');
         

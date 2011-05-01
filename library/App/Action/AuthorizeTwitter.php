@@ -3,7 +3,8 @@
 namespace App\Action;
 
 use App\Twitter,
-    App\Entity;
+    App\Entity,
+    App\Azure;
 
 class AuthorizeTwitter extends Base
 {
@@ -50,8 +51,12 @@ class AuthorizeTwitter extends Base
         $this->getApp()->getDoctrineEntityManager()->flush();
         
         //Add user to our Queue
+        $qItem = new \stdClass();
+        $qItem->twitter_handle = $twitterInfo->screen_name;
         
+        $qManager = new Azure\Queue($this->getApp()->getConfig('azure'));
+        $qManager->addToQueue($qItem);
         
-        return $this->getApp()->redirect('registration-done');
+        return $this->getApp()->redirect('registration-done/'.$user->getTwitterHandle());
     }
 }

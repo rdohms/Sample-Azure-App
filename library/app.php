@@ -20,8 +20,13 @@ $app->get('/authorize-twitter', function () use ($app){
     return $action->run();
 });
 
-$app->get('/registration-done', function () use ($app){
+$app->get('/registration-done/{handle}', function ($handle) use ($app){
     $action = $app->getAction('RegistrationDone');
+    return $action->run(array('handle' => $handle));
+});
+
+$app->post('/save-email', function () use ($app){
+    $action = $app->getAction('SaveEmail');
     return $action->run();
 });
 
@@ -30,9 +35,9 @@ $app->get('/process', function () use ($app){
     return $action->run();
 });
 
-$app->get('/result', function () use ($app){
+$app->get('/result/{handle}', function ($handle) use ($app){
     $action = $app->getAction('Result');
-    return $action->run();
+    return $action->run(array('handle' => $handle));
 });
 
 $app->get('/updateschema', function () use ($app){

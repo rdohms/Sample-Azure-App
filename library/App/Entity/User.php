@@ -33,6 +33,12 @@ class User
      */
     protected $stats;
     
+    /**
+     * @Column(type="string", length=150, nullable=true)
+     * @var string
+     */
+    protected $email;
+    
     public function getId()     
     {
         return $this->id;
@@ -45,12 +51,12 @@ class User
 
     public function getToken()     
     {
-        return $this->token;
+        return unserialize($this->token);
     }
 
     public function setToken($token)
     {
-        $this->token = $token;
+        $this->token = serialize($token);
     }
 
     public function getTwitterHandle()
@@ -71,6 +77,16 @@ class User
     public function setStats($stats)
     {
         $this->stats = $stats;
+    }
+
+    public function getEmail()     
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 
 
